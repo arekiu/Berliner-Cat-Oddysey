@@ -4,6 +4,7 @@ function preload() {
 game.preload()
 }
 
+
 function setup() {
 createCanvas(1000, 600)
 }

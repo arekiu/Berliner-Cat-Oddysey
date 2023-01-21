@@ -1,26 +1,36 @@
 class Game {
     constructor() {
     this.myCat = new MyCat()
-    this.myCatImage
     this.background = new Background()
-    this.backgroundImage
     this.player = new Player()
-    this.playerImage
+    
 
 }
 
 preload() {
-    this.backgroundImage = loadImage("../assets/backgrounds/park.png")
-    this.myCatImage = loadImage("../assets/cats/cat_white-32x48.png")
-    this.playerImage = loadImage("../assets/player/alex-front.png")
-    
+    this.background.image = loadImage("../assets/backgrounds/park.png")
+    this.myCat.image = loadImage("../assets/cats/white_cat/slice_2_0.png")
+    this.player.image = loadImage("../assets/player/alex-front.png")
+
+    this.myCat.imageUp = loadImage("../assets/cats/white_cat/slice_0_0.png")
+    this.myCat.imageDown = loadImage("../assets/cats/white_cat/slice_2_0.png")
+    this.myCat.imageLeft = loadImage("../assets/cats/white_cat/slice_3_0.png")
+    this.myCat.imageRight = loadImage("../assets/cats/white_cat/slice_1_0.png")  
 }
 
 draw() {
-    clear()
+    //clear()
     this.background.draw()
-    this.myCat.draw()
     this.player.draw()
+    
+
+    this.myCat.draw()
+    
+    
+    if (frameCount % 30 === 0)
+    this.myCat.movementDirection()
+    
+
 }
 
 }

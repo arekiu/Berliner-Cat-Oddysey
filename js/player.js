@@ -7,7 +7,7 @@ class Player {
 }
 
 draw() {
-    image(game.playerImage, this.x,this.y, this.width, this.height)
+    image(game.player.image, this.x,this.y, this.width, this.height)
 
 if (keyIsDown(UP_ARROW)) {
         if (this.y > 0) this.moveUp()
