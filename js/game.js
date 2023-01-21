@@ -17,6 +17,7 @@ preload() {
 }
 
 draw() {
+    clear()
     this.background.draw()
     this.myCat.draw()
     this.player.draw()
