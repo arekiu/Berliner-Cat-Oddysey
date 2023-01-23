@@ -5,49 +5,60 @@ class MyCat {
     this.x = 0
     this.y = 0
     this.image
-    this.imageUp
-    this.imageDown
-    this.imageLeft
-    this.imageRight 
+    this.imageBlue
+    this.i = 0
+    this.j = 0
 
     this.catAppears()
 }
 
 catAppears(){
     
-    this.x = Math.floor(Math.random() * 1000 )
-    this.y = Math.floor(Math.random() * 600)
+    this.x = Math.floor(Math.random() * 900) +50
+    this.y = Math.floor(Math.random() * 500) +50
 }
 
 draw() {
-    image(game.myCat.image, this.x,this.y, this.width, this.height)
+    
+    if (frameCount % 10 === 0) {
+        if(this.i > 1) {(this.i = 0) && (this.j -=2)}
+    
+        else {(this.i++) && (this.j++)}
+    }
+    image(this.imageBlue[this.j].src, this.x,this.y, this.width, this.height)
 }
 
 
 movementDirection(){
-    switch(Math.floor(Math.random()* 4 )){
+    let randomSteps = Math.floor(Math.random()* 10)
+
+    switch(Math.floor(Math.random()* 4)){
         case 0: 
-            this.image = this.imageUp
+            this.j = 0
+        
             if(this.y > 100)
-            this.y -= 20
+            this.y -= 20 
             break
 
-        case 1: 
-            this.image = this.imageDown
+        case 1:
+            this.j = 3
+            
             if(this.y < 480)
-            this.y += 20
+            this.y += 20 
             break
 
         case 2:
-            this.image = this.imageLeft
+            this.j = 6
+            
             if(this.x > 60)
-            this.x -=20
+            this.x -=20 
             break
 
         case 3:
-            this.image = this.imageRight
-            if(this.x < 960)
-            this.x +=20
+            this.j = 9
+            
+            if(this.x < 950)
+            this.x +=20 
             break
     } 
     
