@@ -25,14 +25,13 @@ draw() {
     
         else {(this.i++) && (this.j++)}
     }
-    image(this.imageBlue[this.j].src, this.x,this.y, this.width, this.height)
+    image(game.imageBlue[this.j].src, this.x,this.y, this.width, this.height)
 }
 
 
-movementDirection(){
-    let randomSteps = Math.floor(Math.random()* 10)
+movementDirection(random){
 
-    switch(Math.floor(Math.random()* 4)){
+    switch(random){
         case 0: 
             this.j = 0
         
@@ -43,14 +42,14 @@ movementDirection(){
         case 1:
             this.j = 3
             
-            if(this.y < 480)
+            if(this.y < 460)
             this.y += 20 
             break
 
         case 2:
             this.j = 6
             
-            if(this.x > 60)
+            if(this.x > 100)
             this.x -=20 
             break
 
