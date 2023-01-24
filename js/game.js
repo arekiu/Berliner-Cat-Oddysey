@@ -12,7 +12,7 @@ class Game {
 preload() {
     this.catFight = loadSound("../assets/sounds/angrycat.mp3")
 
-    this.background.image = loadImage("../assets/backgrounds/park.png")
+    this.background.image = loadImage("../assets/backgrounds/brandengurger.png")
     this.myCat.image = loadImage("../assets/cats/blue_cat/blue_2_0.png")
     this.player.image = loadImage("../assets/player/alex-front.png")
     

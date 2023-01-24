@@ -15,8 +15,8 @@ class Wildcat {
 
 catAppears(){
     
-    this.x = Math.floor(Math.random() * 900) +50
-    this.y = Math.floor(Math.random() * 500) +50
+    this.x = Math.floor(Math.random() * 920) +30
+    this.y = Math.floor(Math.random() * 420) +100
 }
 
 draw() {
@@ -37,14 +37,14 @@ movementDirection(){
         case 0: 
             this.j = 0
         
-            if(this.y > 100)
+            if(this.y > 200)
             this.y -= 20 
             break
 
         case 1:
             this.j = 3
             
-            if(this.y < 460)
+            if(this.y < 430)
             this.y += 20 
             break
 
@@ -58,7 +58,7 @@ movementDirection(){
         case 3:
             this.j = 9
             
-            if(this.x < 950)
+            if(this.x < 920)
             this.x +=20 
             break
     }    
@@ -66,7 +66,7 @@ movementDirection(){
 
 collisionSound(){
     this.lastCollision = this.lastCollision +1
-if (dist(this.x, this.y, game.player.x, game.player.y) < 80 && this.lastCollision > 100){
+if (dist(this.x, this.y, game.player.x, game.player.y) < 60 && this.lastCollision > 100){
     this.lastCollision = 0
     console.log(frameCount)
     console.log("game colision")
@@ -75,7 +75,7 @@ if (dist(this.x, this.y, game.player.x, game.player.y) < 80 && this.lastCollisio
 }}
 
 collisionAnimation(){
-    if (dist(this.x, this.y, game.player.x, game.player.y) < 80){
+    if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
         this.image = image(game.fight, this.x-130,this.y-100, 300, 300)
     }
 }
