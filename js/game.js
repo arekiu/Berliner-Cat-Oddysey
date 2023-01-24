@@ -1,10 +1,10 @@
 class Game {
     constructor() {
     this.myCat = new MyCat()
-    this.wildCatWhite = new Wildcat("imageWhite")
-    this.wildCatBlack = new Wildcat("imageWhite")
     this.background = new Background()
     this.player = new Player()
+    this.wildCats = [new Wildcat("imageBlack"), new Wildcat("imageBlack"),
+                    new Wildcat("imageWhite"), new Wildcat("imageWhite")]
     
 
 }
@@ -81,24 +81,23 @@ draw() {
 
 
 
+    this.wildCats.forEach(function(cat) {
+    cat.draw()
+        })
 
-    
-    this.wildCatWhite.draw()
-    this.wildCatBlack.draw()
+    this.wildCats.forEach(function(cat){
+        if (frameCount % 60 === 0)
+        cat.movementDirection() 
+    })
 
-    if (frameCount % 60 === 0)
-    this.wildCatWhite.movementDirection() 
+    this.wildCats.forEach(function(cat){
+        cat.collisionSound()
+    })
 
-    if (frameCount % 60 === 0)
-    this.wildCatBlack.movementDirection() 
-
-        
-    this.wildCatBlack.collisionSound()
-    this.wildCatWhite.collisionSound()
-
-    this.wildCatBlack.collisionAnimation()
-    this.wildCatWhite.collisionAnimation()
-}
+    this.wildCats.forEach(function(cat){
+        cat.collisionAnimation()
+        })
+    }
 
 
 }

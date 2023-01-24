@@ -66,18 +66,16 @@ movementDirection(){
 
 collisionSound(){
     this.lastCollision = this.lastCollision +1
-if (dist(this.x, this.y, game.player.x, game.player.y) < 50 && this.lastCollision > 100){
+if (dist(this.x, this.y, game.player.x, game.player.y) < 80 && this.lastCollision > 100){
     this.lastCollision = 0
     console.log(frameCount)
     console.log("game colision")
-    //this.image = image(game.fight, this.x-50,this.y-50, 200, 200)
     
     game.catFight.play()
-    
 }}
 
 collisionAnimation(){
-    if (dist(this.x, this.y, game.player.x, game.player.y) < 50){
+    if (dist(this.x, this.y, game.player.x, game.player.y) < 80){
         this.image = image(game.fight, this.x-130,this.y-100, 300, 300)
     }
 }
