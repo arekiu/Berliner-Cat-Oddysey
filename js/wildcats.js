@@ -8,6 +8,7 @@ class Wildcat {
     this.color = color
     this.i = 0
     this.j = 0
+    this.lastCollision = 0
 
     this.catAppears()
 }
@@ -26,6 +27,7 @@ draw() {
         else {(this.i++) && (this.j++)}
     }
     image(game[this.color][this.j].src, this.x,this.y, this.width, this.height)
+
 }
 
 
@@ -59,8 +61,25 @@ movementDirection(){
             if(this.x < 950)
             this.x +=20 
             break
-    } 
+    }    
+}
+
+collisionSound(){
+    this.lastCollision = this.lastCollision +1
+if (dist(this.x, this.y, game.player.x, game.player.y) < 50 && this.lastCollision > 100){
+    this.lastCollision = 0
+    console.log(frameCount)
+    console.log("game colision")
+    //this.image = image(game.fight, this.x-50,this.y-50, 200, 200)
     
+    game.catFight.play()
+    
+}}
+
+collisionAnimation(){
+    if (dist(this.x, this.y, game.player.x, game.player.y) < 50){
+        this.image = image(game.fight, this.x-130,this.y-100, 300, 300)
+    }
 }
 
 }

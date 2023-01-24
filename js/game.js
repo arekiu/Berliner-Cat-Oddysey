@@ -10,11 +10,13 @@ class Game {
 }
 
 preload() {
+    this.catFight = loadSound("../assets/sounds/angrycat.mp3")
+
     this.background.image = loadImage("../assets/backgrounds/park.png")
     this.myCat.image = loadImage("../assets/cats/blue_cat/blue_2_0.png")
     this.player.image = loadImage("../assets/player/alex-front.png")
-    // this.wildCatWhite.image = loadImage("../assets/cats/white_cat/slice_2_0.png")
-    // this.wildCatBlack.image = loadImage("../assets/cats/white_cat/slice_2_0.png")
+    
+    this.fight = loadImage("../assets/effects/fight.gif")
 
 
     this.imageBlue = [
@@ -66,7 +68,7 @@ this.imageBlack = [
 }
 
 draw() {
-    //clear()
+    clear()
     this.background.draw()
     this.player.draw()
     this.myCat.draw()
@@ -89,6 +91,14 @@ draw() {
 
     if (frameCount % 60 === 0)
     this.wildCatBlack.movementDirection() 
+
+        
+    this.wildCatBlack.collisionSound()
+    this.wildCatWhite.collisionSound()
+
+    this.wildCatBlack.collisionAnimation()
+    this.wildCatWhite.collisionAnimation()
 }
+
 
 }
