@@ -1,16 +1,26 @@
 class Player {
     constructor() {
-    this.width = 110
-    this.height = 180
-    this.x = 800
-    this.y = 300
+    this.width = 55
+    this.height = 90
+    this.x = 0
+    this.y = 0
+    this.ymax = 150
+    this.lives = 3
+
+    this.playerAppears()
+}
+
+playerAppears(){
+    
+    this.x = 900
+    this.y = 400
 }
 
 draw() {
     image(game.player.image, this.x,this.y, this.width, this.height)
 
 if (keyIsDown(UP_ARROW)) {
-        if (this.y > 0) this.moveUp()
+        if (this.y > this.ymax) this.moveUp()
 }
 
 if (keyIsDown(DOWN_ARROW)) {
