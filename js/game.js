@@ -21,87 +21,44 @@ preload() {
     this.background.image = [{src: loadImage("../assets/backgrounds/brandengurger.png")},
                     {src: loadImage("../assets/backgrounds/berlinwall.png")},
                     {src: loadImage("../assets/backgrounds/alexander1.png")}]
-    this.myCat.image = loadImage("../assets/cats/blue_cat/blue_2_0.png")
+    this.myCat.image = loadImage("../assets/cats/blue_cat/blue_down.gif")
     this.player.image = loadImage("../assets/player/ale_front_110x180.png")
     
     this.fight = loadImage("../assets/effects/fight.gif")
 
+    this.heart = loadImage("../assets/player/rainbowheart.png")
+
 
     this.colorBlue = [
-    /*catUp [0]*/ {src: loadImage("../assets/cats/blue_cat/blue_0_0.png")},
-                {src: loadImage("../assets/cats/blue_cat/blue_0_1.png")},
-                {src: loadImage("../assets/cats/blue_cat/blue_0_2.png")},
-    /*catDown [3]*/ {src: loadImage("../assets/cats/blue_cat/blue_2_0.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_2_1.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_2_2.png")},
-    /*catLeft [6]*/ {src: loadImage("../assets/cats/blue_cat/blue_3_0.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_3_1.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_3_2.png")},
-    /*catRight [9]*/ {src: loadImage("../assets/cats/blue_cat/blue_1_0.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_1_1.png")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_1_2.png")}
-    ]
+                    {src: loadImage("../assets/cats/blue_cat/blue_up.gif")},
+                    {src: loadImage("../assets/cats/blue_cat/blue_down.gif")},
+                    {src: loadImage("../assets/cats/blue_cat/blue_left.gif")},
+                    {src: loadImage("../assets/cats/blue_cat/blue_right.gif")}]
+
 
     this.colorWhite = [
-/*catUp [0]*/ {src: loadImage("../assets/cats/white_cat/slice_0_0.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_0_1.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_0_2.png")},
-/*catDown [3]*/ {src: loadImage("../assets/cats/white_cat/slice_2_0.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_2_1.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_2_2.png")},
-/*catLeft [6]*/ {src: loadImage("../assets/cats/white_cat/slice_3_0.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_3_1.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_3_2.png")},
-/*catRight [9]*/ {src: loadImage("../assets/cats/white_cat/slice_1_0.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_1_1.png")},
-        {src: loadImage("../assets/cats/white_cat/slice_1_2.png")}
-]
+                    {src: loadImage("../assets/cats/white_cat/white-up.gif")},
+                    {src: loadImage("../assets/cats/white_cat/white-down.gif")},
+                    {src: loadImage("../assets/cats/white_cat/white-left.gif")},
+                    {src: loadImage("../assets/cats/white_cat/white-right.gif")}]
 
 this.colorBlack = [
-    /*catUp [0]*/ {src: loadImage("../assets/cats/black_cat/black_0_0.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_0_1.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_0_2.png")},
-    /*catDown [3]*/ {src: loadImage("../assets/cats/black_cat/black_2_0.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_2_1.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_2_2.png")},
-    /*catLeft [6]*/ {src: loadImage("../assets/cats/black_cat/black_3_0.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_3_1.png")},                
-                    {src: loadImage("../assets/cats/black_cat/black_3_2.png")},
-    /*catRight [9]*/ {src: loadImage("../assets/cats/black_cat/black_1_0.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_1_1.png")},
-                    {src: loadImage("../assets/cats/black_cat/black_1_2.png")}
-    ]
+                    {src: loadImage("../assets/cats/black_cat/black_up.gif")},
+                    {src: loadImage("../assets/cats/black_cat/black_down.gif")},
+                    {src: loadImage("../assets/cats/black_cat/black_left.gif")},
+                    {src: loadImage("../assets/cats/black_cat/black_right.gif")}]
 
     this.colorBrown = [
-        {src: loadImage("../assets/cats/brown_cat/brown_0_1.png")},
-        /*catUp [0]*/ {src: loadImage("../assets/cats/brown_cat/brown_0_0.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_0_2.png")},
-        /*catDown [3]*/ {src: loadImage("../assets/cats/brown_cat/brown_2_0.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_2_1.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_2_2.png")},
-        /*catLeft [6]*/ {src: loadImage("../assets/cats/brown_cat/brown_3_0.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_3_1.png")},                
-                        {src: loadImage("../assets/cats/brown_cat/brown_3_2.png")},
-        /*catRight [9]*/ {src: loadImage("../assets/cats/brown_cat/brown_1_0.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_1_1.png")},
-                        {src: loadImage("../assets/cats/brown_cat/brown_1_2.png")}
-        ]
+                    {src: loadImage("../assets/cats/brown_cat/brown_up.gif")},
+                    {src: loadImage("../assets/cats/brown_cat/brown_down.gif")},
+                    {src: loadImage("../assets/cats/brown_cat/brown_left.gif")},
+                    {src: loadImage("../assets/cats/brown_cat/brown_right.gif")}]
     
     this.colorOrange = [
-        /*catUp [0]*/ {src: loadImage("../assets/cats/orange_cat/orange_0_0.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_0_1.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_0_2.png")},
-        /*catDown [3]*/ {src: loadImage("../assets/cats/orange_cat/orange_2_0.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_2_1.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_2_2.png")},
-        /*catLeft [6]*/ {src: loadImage("../assets/cats/orange_cat/orange_3_0.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_3_1.png")},                
-                        {src: loadImage("../assets/cats/orange_cat/orange_3_2.png")},
-        /*catRight [9]*/ {src: loadImage("../assets/cats/orange_cat/orange_1_0.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_1_1.png")},
-                        {src: loadImage("../assets/cats/orange_cat/orange_1_2.png")}
-        ]
-
+                    {src: loadImage("../assets/cats/orange_cat/orange_up.gif")},
+                    {src: loadImage("../assets/cats/orange_cat/orange_down.gif")},
+                    {src: loadImage("../assets/cats/orange_cat/orange_left.gif")},
+                    {src: loadImage("../assets/cats/orange_cat/orange_right.gif")}]
 
 }
 

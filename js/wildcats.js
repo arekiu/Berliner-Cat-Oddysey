@@ -22,12 +22,6 @@ catAppears(){
 
 draw() {
     
-    if (frameCount % 10 === 0) {
-        if(this.i > 1) {(this.i = 0) && (this.j -=2)}
-    
-        else {(this.i++) && (this.j++)}
-    }
-    
     image(game[this.color][this.j].src, this.x,this.y, this.width, this.height)
 
 
@@ -45,21 +39,21 @@ movementDirection(){
             break
 
         case 1:
-            this.j = 3
+            this.j = 1
             
             if(this.y < 430)
             this.y += 20 
             break
 
         case 2:
-            this.j = 6
+            this.j = 2
             
             if(this.x > 100)
             this.x -=20 
             break
 
         case 3:
-            this.j = 9
+            this.j = 3
             
             if(this.x < 920)
             this.x +=20 
@@ -77,7 +71,7 @@ movementUp(){
 
 movementDown(){
 
-    this.j = 3
+    this.j = 1
     this.y += 60 }
 
 

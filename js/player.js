@@ -17,6 +17,8 @@ playerAppears(){
 }
 
 draw() {
+
+    this.hearts()
     image(game.player.image, this.x,this.y, this.width, this.height)
 
 if (keyIsDown(UP_ARROW)) {
@@ -48,4 +50,22 @@ moveLeft(){
 moveRight(){
     this.x += 5}
 
+
+
+hearts(){
+    if(this.lives=== 1){
+        image(game.heart, 0, 0, 90,70)}
+    
+        else if(this.lives === 2){
+            image(game.heart, 0, 0, 90,70)
+            image(game.heart, 55,0,90,70)
+        }
+
+        else if(this.lives === 3){
+            image(game.heart, 0, 0, 90,70)
+            image(game.heart, 55,0,90,70)
+            image(game.heart, 110,0,90,70)}
+        }
+
+    
 }
