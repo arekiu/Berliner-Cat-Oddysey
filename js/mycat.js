@@ -75,4 +75,16 @@ collision(){
     }
 }
 
+collision1(){
+    if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
+        console.log("game colision")
+        game.level = 2
+        game.background.level =2
+        game.player.playerAppears()
+        game.player.ymax = 180
+        this.ymax = 260
+    }
+}
+
+
 }

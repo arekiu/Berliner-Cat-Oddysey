@@ -91,6 +91,9 @@ if (dist(this.x, this.y, game.player.x, game.player.y) < 60 && this.lastCollisio
     game.catFight.play()
     game.player.lives -= 1
     console.log(game.player.lives)
+    if(game.player.lives===0){
+        location.reload()
+    }
 }}
 
 collisionAnimation(){

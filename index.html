@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
-    <title>cat game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
+
+<title>Berliner Cat Odyssey</title>
 </head>
 <body>
-    <p id="score">Level: <span>0</span></p>
 
-    <script src="./js/obstacles.js"></script>
-    <script src="./js/mycat.js"></script>
-    <script src="./js/wildcats.js"></script>
-    <script src="./js/backgrounds.js"></script>
-    <script src="./js/player.js"></script>
-    <script src="./js/game.js"></script>
-    <script src="./js/main.js"></script>
+<div id="text">
+<p>You moved to Berlin a couple of months ago and now you have to deal not only with the German bureaucracy, but also with your stupid cat running around the city. </p>
+<p>Move using the Arrows in your keyboard.<br> And be careful with the other cats! <span id="red">(They´re not friendly...)</span></p>
+</div>
+
+<img id="cat" src="./assets/effects/bluecat.gif">
+<a class="start" href="./index1.html">START GAME</a>
+
+
+<audio src="./assets/sounds/99_luftballons.mp3" autoplay loop></audio>
 </body>
 </html>

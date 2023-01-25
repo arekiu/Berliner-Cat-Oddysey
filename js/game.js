@@ -154,45 +154,57 @@ draw() {
                     let random = Math.floor(Math.random()* 4)
     
                     this.myCat.movementDirection(random)}
-                    this.myCat.collision()
+                    this.myCat.collision1()
                 
 
 
-            this.wildCatsVertical.forEach(function(cat) {
-            cat.draw()
-                })
+                    this.wildCatsVertical.forEach(function(cat) {
+                    cat.draw()
+                    })
         
             
-                if (frameCount % 120 === 0){
+                    if (frameCount % 120 === 0){
         
-                this.wildCatsVertical.forEach(function(cat){
-                if(cat.y > 300){
+                    this.wildCatsVertical.forEach(function(cat){
+                    if(cat.y > 300){
                     cat.movementUp()
-                }
+                    }
             
-                else if(cat.y < 300){
-                    if (frameCount % 60 === 0){
-                    cat.movementDown()} 
+                    else if(cat.y < 300){
+                        if (frameCount % 60 === 0){
+                        cat.movementDown()} 
                     
-                }   
-            })}
+                        }   
+                    })}
 
+                    this.wildCatsVertical.forEach(function(cat){
+                    cat.collisionSound()
+                    })
+        
+                    this.wildCatsVertical.forEach(function(cat){
+                    cat.collisionAnimation()
+                    })    
+                    }
 
+                    
+                    else if(this.level === 2){
+
+                        this.background.draw()
+                        this.player.draw()
+                        this.myCat.draw()
         
+    
+                        if (frameCount % 60 === 0){
+                        let random = Math.floor(Math.random()* 4)
         
-            this.wildCatsVertical.forEach(function(cat){
-                cat.collisionSound()
-            })
-        
-            this.wildCatsVertical.forEach(function(cat){
-                cat.collisionAnimation()
-                })    
+                        this.myCat.movementDirection(random)}
+                        this.myCat.collision1()
+                    
+                    }
 
 
 
     }
-
-}
 
 
 
