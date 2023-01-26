@@ -10,13 +10,14 @@ class Wildcat {
     this.i = 0
     this.j = 0
     this.lastCollision = 0
+    this.counterDirection = 1
 
     this.catAppears()
 }
 
 catAppears(){
     
-    this.x = Math.floor(Math.random() * 920) +30
+    this.x = Math.floor(Math.random() * 750) +30
     this.y = Math.floor(Math.random() * 320) +200
 }
 
@@ -30,7 +31,7 @@ draw() {
 
 movementDirection(){
 
-    switch(Math.floor(Math.random()* 4)){
+    switch(Math.floor(Math.random()* 6)){
         case 0: 
             this.j = 0
         
@@ -46,6 +47,7 @@ movementDirection(){
             break
 
         case 2:
+        case 4:
             this.j = 2
             
             if(this.x > 100)
@@ -53,6 +55,7 @@ movementDirection(){
             break
 
         case 3:
+        case 5:
             this.j = 3
             
             if(this.x < 920)
@@ -67,12 +70,17 @@ movementUp(){
         
     this.j = 0
     this.y -= 20 
-}
+    if(this.y <= this.ymax){
+    this.counterDirection += 1}}
 
 movementDown(){
 
     this.j = 1
-    this.y += 60 }
+    this.y += 20
+    if(this.y >= 450){
+    this.counterDirection += 1
+    } 
+}
 
 
 

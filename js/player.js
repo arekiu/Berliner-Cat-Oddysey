@@ -4,7 +4,7 @@ class Player {
     this.height = 90
     this.x = 0
     this.y = 0
-    this.ymax = 150
+    this.ymax = 180
     this.lives = 3
 
     this.playerAppears()
@@ -14,6 +14,7 @@ playerAppears(){
     
     this.x = 900
     this.y = 400
+
 }
 
 draw() {
