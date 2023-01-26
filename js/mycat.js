@@ -59,21 +59,20 @@ movementDirection(random){
     
 }
 
-collision(){
+gotCat(){
     if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
-        text("next level " , 300,300)
-        console.log("game colision")
-        setTimeout(()=>{ game.level = 1
+        game.getFrames = frameCount
+        game.level = 1
         game.background.level =1
         game.player.playerAppears()
         game.player.ymax = 150
-        this.ymax = 150},3000 )
+        this.ymax = 150
     }
 }
 
-collision1(){
+gotCat1(){
     if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
-        console.log("game colision")
+        game.getFrames = frameCount
         game.level = 2
         game.background.level = 2
         game.player.playerAppears()
@@ -82,14 +81,21 @@ collision1(){
     }
 }
 
-collision2(){
+gotCat2(){
     if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
-        console.log("game colision")
+        game.getFrames = frameCount
         game.level = 3
         game.background.level = 3
         game.player.playerAppears()
         game.player.ymax = 250
-        this.ymax = 250
+        this.ymax = 300
+    }
+}
+
+gotCat3(){
+    if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
+        game.getFrames = frameCount
+        game.level = 4
     }
 }
 

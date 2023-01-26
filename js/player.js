@@ -6,6 +6,7 @@ class Player {
     this.y = 0
     this.ymax = 180
     this.lives = 3
+    this.j = 0
 
     this.playerAppears()
 }
@@ -20,7 +21,7 @@ playerAppears(){
 draw() {
 
     this.hearts()
-    image(game.player.image, this.x,this.y, this.width, this.height)
+    image(game.playerImage[this.j].src, this.x,this.y, this.width, this.height)
 
 if (keyIsDown(UP_ARROW)) {
         if (this.y > this.ymax) this.moveUp()
@@ -35,21 +36,24 @@ if (keyIsDown(LEFT_ARROW)) {
 }
 
 if (keyIsDown(RIGHT_ARROW)) {
-    if (this.x < 1000-this.width) this.moveRight()
-}
+    if (this.x < 1000-this.width) this.moveRight()}
 }
 
 moveUp(){
-    this.y -= 5}
+    this.y -= 5
+    this.j = 0}
 
 moveDown(){
-    this.y += 5}
+    this.y += 5
+    this.j = 1}
 
 moveLeft(){
-    this.x -= 5}    
+    this.x -= 5
+    this.j = 2}    
 
 moveRight(){
-    this.x += 5}
+    this.x += 5
+    this.j = 3}
 
 
 

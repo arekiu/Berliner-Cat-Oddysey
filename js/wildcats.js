@@ -42,7 +42,7 @@ movementDirection(){
         case 1:
             this.j = 1
             
-            if(this.y < 430)
+            if(this.y < 460)
             this.y += 20 
             break
 
@@ -77,7 +77,7 @@ movementDown(){
 
     this.j = 1
     this.y += 20
-    if(this.y >= 450){
+    if(this.y >= 470){
     this.counterDirection += 1
     } 
 }
@@ -94,7 +94,8 @@ if (dist(this.x, this.y, game.player.x, game.player.y) < 60 && this.lastCollisio
     game.player.lives -= 1
     console.log(game.player.lives)
     if(game.player.lives===0){
-        location.reload()
+        game.level = 5
+        game.background.level = 5
     }
 }}
 
@@ -103,5 +104,6 @@ collisionAnimation(){
         this.image = image(game.fight, this.x-130,this.y-100, 300, 300)
     }
 }
+
 
 }
