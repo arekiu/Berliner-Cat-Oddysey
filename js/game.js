@@ -29,62 +29,60 @@ class Game {
 }
 
 preload() {
-    this.catFight = loadSound("../assets/sounds/angrycat.mp3")
+    this.catFight = loadSound("assets/sounds/angrycat.mp3")
 
-    this.background.image = [{src: loadImage("../assets/backgrounds/brandengurger.png")},
-                    {src: loadImage("../assets/backgrounds/berlinwall.png")},
-                    {src: loadImage("../assets/backgrounds/alexander1.png")},
-                    {src: loadImage("../assets/backgrounds/berghain.png")},
-                    {src: loadImage("../assets/backgrounds/finally.png")},
-                    {src: loadImage("../assets/backgrounds/dead.png")}]
-    this.myCat.image = loadImage("../assets/cats/blue_cat/blue_down.gif")
-
-    this.playerImage = [
-        {src: loadImage("../assets/player/alex_back.gif")},
-        {src: loadImage("../assets/player/alex_front.gif")},
-        {src: loadImage("../assets/player/alex-left.gif")},
-        {src: loadImage("../assets/player/alex_right.gif")}]
+    this.background.image = [{src: loadImage("assets/backgrounds/brandengurger.png")},
+                    {src: loadImage("assets/backgrounds/berlinwall.png")},
+                    {src: loadImage("assets/backgrounds/alexander1.png")},
+                    {src: loadImage("assets/backgrounds/berghain.png")},
+                    {src: loadImage("assets/backgrounds/finally.png")},
+                    {src: loadImage("assets/backgrounds/dead.png")}]
+    this.myCat.image = loadImage("assets/cats/blue_cat/blue_down.gif")
+  this.playerImage = [
+        {src: loadImage("assets/player/alex_back.gif")},
+        {src: loadImage("assets/player/alex_front.gif")},
+        {src: loadImage("assets/player/alex-left.gif")},
+        {src: loadImage("assets/player/alex_right.gif")}]
     
-    this.fight = loadImage("../assets/effects/fight.gif")
-    this.screen = loadImage("../assets/backgrounds/did1.png")
-    this.heart = loadImage("../assets/player/rainbowheart.png")
+    this.fight = loadImage("assets/effects/fight.gif")
+    this.screen = loadImage("assets/backgrounds/did1.png")
+    this.heart = loadImage("assets/player/rainbowheart.png")
 
-    this.music = [{src: loadSound("../assets/sounds/level0.mp3")},
-                    {src: loadSound("../assets/sounds/level1.mp3")},
-                    {src: loadSound("../assets/sounds/level2.mp3")},
-                    {src: loadSound("../assets/sounds/level3.mp3")}]
+    this.music = [{src: loadSound("assets/sounds/level0.mp3")},
+                    {src: loadSound("assets/sounds/level1.mp3")},
+                    {src: loadSound("assets/sounds/level2.mp3")},
+                    {src: loadSound("assets/sounds/level3.mp3")}]
 
 
     this.colorBlue = [
-                    {src: loadImage("../assets/cats/blue_cat/blue_up.gif")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_down.gif")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_left.gif")},
-                    {src: loadImage("../assets/cats/blue_cat/blue_right.gif")}]
+                    {src: loadImage("assets/cats/blue_cat/blue_up.gif")},
+                    {src: loadImage("assets/cats/blue_cat/blue_down.gif")},
+                    {src: loadImage("assets/cats/blue_cat/blue_left.gif")},
+                    {src: loadImage("assets/cats/blue_cat/blue_right.gif")}]
 
-
-    this.colorWhite = [
-                    {src: loadImage("../assets/cats/white_cat/white-up.gif")},
-                    {src: loadImage("../assets/cats/white_cat/white-down.gif")},
-                    {src: loadImage("../assets/cats/white_cat/white-left.gif")},
-                    {src: loadImage("../assets/cats/white_cat/white-right.gif")}]
+  this.colorWhite = [
+                    {src: loadImage("assets/cats/white_cat/white-up.gif")},
+                    {src: loadImage("assets/cats/white_cat/white-down.gif")},
+                    {src: loadImage("assets/cats/white_cat/white-left.gif")},
+                    {src: loadImage("assets/cats/white_cat/white-right.gif")}]
 
 this.colorBlack = [
-                    {src: loadImage("../assets/cats/black_cat/black_up.gif")},
-                    {src: loadImage("../assets/cats/black_cat/black_down.gif")},
-                    {src: loadImage("../assets/cats/black_cat/black_left.gif")},
-                    {src: loadImage("../assets/cats/black_cat/black_right.gif")}]
+                    {src: loadImage("assets/cats/black_cat/black_up.gif")},
+                    {src: loadImage("assets/cats/black_cat/black_down.gif")},
+                    {src: loadImage("assets/cats/black_cat/black_left.gif")},
+                    {src: loadImage("assets/cats/black_cat/black_right.gif")}]
 
     this.colorBrown = [
-                    {src: loadImage("../assets/cats/brown_cat/brown_up.gif")},
-                    {src: loadImage("../assets/cats/brown_cat/brown_down.gif")},
-                    {src: loadImage("../assets/cats/brown_cat/brown_left.gif")},
-                    {src: loadImage("../assets/cats/brown_cat/brown_right.gif")}]
+                    {src: loadImage("assets/cats/brown_cat/brown_up.gif")},
+                    {src: loadImage("assets/cats/brown_cat/brown_down.gif")},
+                    {src: loadImage("assets/cats/brown_cat/brown_left.gif")},
+                    {src: loadImage("assets/cats/brown_cat/brown_right.gif")}]
     
     this.colorOrange = [
-                    {src: loadImage("../assets/cats/orange_cat/orange_up.gif")},
-                    {src: loadImage("../assets/cats/orange_cat/orange_down.gif")},
-                    {src: loadImage("../assets/cats/orange_cat/orange_left.gif")},
-                    {src: loadImage("../assets/cats/orange_cat/orange_right.gif")}]
+                    {src: loadImage("assets/cats/orange_cat/orange_up.gif")},
+                    {src: loadImage("assets/cats/orange_cat/orange_down.gif")},
+                    {src: loadImage("assets/cats/orange_cat/orange_left.gif")},
+                    {src: loadImage("assets/cats/orange_cat/orange_right.gif")}]
 
 }
 
