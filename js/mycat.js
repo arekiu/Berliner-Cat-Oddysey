@@ -96,6 +96,7 @@ gotCat3(){
     if (dist(this.x, this.y, game.player.x, game.player.y) < 60){
         game.getFrames = frameCount
         game.level = 4
+        game.background.level = 4
     }
 }
 
