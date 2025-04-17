@@ -1,1 +1,5 @@
-First project in Ironhack, creating a browser game using P5 library in Javascript 
+Berliner cat oddysey
+
+Browser game created in Javascript using p5 library
+
+Live Demo here: https://arekiu.github.io/Berliner-Cat-Oddysey/
